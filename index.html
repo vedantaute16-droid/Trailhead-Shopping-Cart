@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Trailhead Supply Co — Gear Shop</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="wrap">
+      <div class="brand">
+        <span class="brand-mark">▲</span>
+        <span class="brand-name">Trailhead Supply Co.</span>
+      </div>
+      <button id="cart-toggle" class="cart-toggle">
+        Packing List
+        <span id="cart-count" class="cart-count">0</span>
+      </button>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="hero">
+      <p class="eyebrow">Field-tested gear</p>
+      <h1>Pack light. <br>Wander far.</h1>
+      <p class="hero-sub">Eight essentials, hand-picked for the trail. Add what you need — your packing list keeps a running weight of your total.</p>
+    </section>
+
+    <section class="grid" id="product-grid">
+      <!-- Row 1 -->
+      <!-- Row 2 -->
+      <!-- Product cards are rendered here by app.js -->
+    </section>
+  </main>
+
+  <!-- Cart / "Packing List" drawer -->
+  <aside id="cart-drawer" class="cart-drawer">
+    <div class="cart-drawer-head">
+      <h2>Packing List</h2>
+      <button id="cart-close" class="icon-btn" aria-label="Close cart">✕</button>
+    </div>
+
+    <div id="cart-items" class="cart-items">
+      <p class="cart-empty" id="cart-empty">Your list is empty. Add some gear from the shop.</p>
+    </div>
+
+    <div class="cart-summary">
+      <div class="cart-row">
+        <span>Items</span>
+        <span id="cart-item-count">0</span>
+      </div>
+      <div class="cart-row total">
+        <span>Total</span>
+        <span id="cart-total">$</span>
+      </div>
+      <button id="checkout-btn" class="checkout-btn">Checkout</button>
+    </div>
+  </aside>
+  <div id="cart-overlay" class="cart-overlay"></div>
+
+  <!-- toast for add-to-cart confirmation -->
+  <div id="toast" class="toast"></div>
+
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <!-- Redux (standalone build, no React needed) -->
+  <script src="https://unpkg.com/redux@4.2.1/dist/redux.min.js"></script>
+
+  <script src="products.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
